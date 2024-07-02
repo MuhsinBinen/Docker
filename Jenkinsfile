@@ -32,7 +32,7 @@ pipeline {
         stage('Push image to Hub'){
             steps{
                 script{
-                    docker.image("demo13:${env.BUILD_NUMBER}").run("-d -p 8082:8082 --name demo-container")
+                    docker.image("demo13:${env.BUILD_NUMBER}").run("-d -p 8083:8083 --name demo-container")
                 }
             }
   }
